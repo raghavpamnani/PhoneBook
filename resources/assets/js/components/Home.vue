@@ -36,3 +36,24 @@
 	<Add :openmodal='addActive' @closeRequest='close'></Add>
 	</div>
 </template>
+
+
+<script>
+let Add = require('./Add.vue');
+	export default{
+		components:{Add},
+		data(){
+		return{
+			addActive : ''
+			}
+		},
+		methods:{
+			openAdd(){
+				this.addActive = 'is-active';
+			},
+			close(){
+				this.addActive = ''
+			}
+		}
+	}
+</script>
